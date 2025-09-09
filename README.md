@@ -1,63 +1,76 @@
 📂 Smart File Organizer
 
-Smart File Organizer is a Python-based automation tool that helps you clean and structure your files effortlessly. It scans a given folder, extracts text from different file types, and organizes them into meaningful categories using keyword rules. It also detects and skips duplicate files.
+A lightweight file management tool to automatically organize documents, spreadsheets, presentations, and images into structured folders. It reduces clutter and makes file access quick and efficient — all from a simple, user-friendly interface.
 
-✨ Features
+📄 Description
 
-🔍 Automatic Categorization – Organizes files (PDF, Word, Excel, CSV, PPT, TXT) into folders like Academics, Finance, Work, Health, Personal.
+The Smart File Organizer is a Python-based solution for managing everyday files. It extracts text from multiple file formats and categorizes them into predefined groups such as Academics, Finance, Work, Health, and Personal. Duplicate files are detected and skipped, ensuring a clean and well-structured directory. With a simple Streamlit interface, organizing files becomes as easy as one click.
 
-📑 Text Extraction – Reads file content using libraries like PyPDF2, python-docx, pandas, python-pptx.
+🎯 Objective
 
-🚫 Duplicate Detection – Avoids storing the same file twice (MD5 hash-based).
+Automatically organize files into relevant category folders
 
-📊 Streamlit Dashboard – Simple web interface to select a folder and view results with summaries.
+Support multiple file formats (PDF, DOCX, TXT, Excel, CSV, PPTX, Images)
 
-📂 Organized Output – Creates a structured organized/ folder with subcategories.
+Ensure clean storage by detecting and skipping duplicates
 
-🛠️ Tech Stack
+Provide a user-friendly interface for quick access
 
-Language: Python
+⭐ Features
 
-Libraries: pandas, python-docx, PyPDF2, python-pptx, openpyxl
+📂 Auto Categorization – Organizes files into structured folders
 
-UI: Streamlit (web-based interface)
+📑 Multi-Format Support – Works with documents, spreadsheets, presentations, and images
 
-🚀 How It Works
+🔁 Duplicate Detection – Skips already existing files to avoid clutter
 
-Enter or select a folder path in the Streamlit app.
+🖥️ Simple UI – Streamlit-based interface for easy folder selection and execution
 
-The tool extracts text from each file and matches it with keywords from categories.json.
+⚡ Lightweight & Fast – Runs locally with minimal setup
 
-Files are moved into respective category folders (inside organized/).
+🧱 Project Structure
+smart_file_organizer/
+│
+├── gui.py               # Streamlit-based user interface
+├── main.py              # Core file organization logic
+├── extractors.py        # File text extraction functions
+├── categories.json      # Predefined keyword-based categories
+├── organized/           # Output folder (auto-created after run)
+├── requirements.txt     # Dependencies list
+└── README.md            # Project documentation
 
-Duplicates are detected and skipped.
+📊 Example Output
+Input Folder (before organizing)
+Documents/
+│
+├── invoice_jan.pdf
+├── exam_notes.docx
+├── shopping_list.txt
+├── salary_slip.pdf
+├── meeting_report.pptx
 
-A summary report is displayed in the UI.
-
-📦 Installation
-git clone https://github.com/your-username/smart-file-organizer.git
-cd smart-file-organizer
-pip install -r requirements.txt
-
-▶️ Run the App
-streamlit run gui.py
-
-📂 Example Output
-organized/
+Output Folder (after organizing)
+Documents/organized/
+│
+├── Finance/
+│   ├── invoice_jan.pdf
+│   ├── salary_slip.pdf
 │
 ├── Academics/
-│   └── assignment.docx
-├── Finance/
-│   └── bank_statement.pdf
+│   ├── exam_notes.docx
+│
 ├── Work/
-│   └── meeting_notes.txt
-└── Uncategorized/
-    └── random_file.csv
+│   ├── meeting_report.pptx
+│
+├── Personal/
+│   ├── shopping_list.txt
 
-📌 Future Enhancements
+🛠️ Tools & Technologies
 
-Add custom category creation via UI
+Python – Core logic & automation
 
-Provide file preview before moving
+pandas, python-docx, PyPDF2, python-pptx – File handling and text extraction
 
-Option to export summary report (CSV/Excel)
+Pillow & pytesseract – Image text extraction (OCR)
+
+Streamlit – Interactive web-based GUI
