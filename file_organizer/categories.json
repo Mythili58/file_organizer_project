@@ -1,0 +1,7 @@
+{
+  "Academics": ["exam", "assignment", "research", "university", "project","resume"],
+  "Finance": ["invoice", "salary", "bank", "payment", "loan", "tax", "receipt"],
+  "Health": ["medical", "doctor", "hospital", "prescription", "diagnosis"],
+  "Work": ["meeting", "client", "report", "proposal", "business"],
+  "Personal": ["travel", "shopping", "family", "friends", "hobby"]
+}
