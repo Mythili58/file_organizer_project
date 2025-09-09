@@ -33,13 +33,14 @@ The Smart File Organizer is a Python-based solution for managing everyday files.
 
 smart_file_organizer/
 │
-├── gui.py # Streamlit-based user interface
-├── main.py # Core file organization logic
-├── extractors.py # File text extraction functions
-├── categories.json # Predefined keyword-based categories
-├── organized/ # Output folder (auto-created after run)
-├── requirements.txt # Dependencies list
-└── README.md # Project documentation
+├── gui.py               # Streamlit-based user interface
+├── main.py              # Core file organization logic
+├── extractors.py        # File text extraction functions
+├── categories.json      # Predefined keyword-based categories
+├── organized/           # Output folder (auto-created after run)
+├── requirements.txt     # List of dependencies
+└── README.md            # Project documentation
+
 
 
 
@@ -49,7 +50,6 @@ smart_file_organizer/
 
 ### Input Folder (before organizing)  
 Documents/
-│
 ├── invoice_jan.pdf
 ├── exam_notes.docx
 ├── shopping_list.txt
@@ -57,21 +57,21 @@ Documents/
 ├── meeting_report.pptx
 
 
+
 ### Output Folder (after organizing)  
 Documents/organized/
-│
 ├── Finance/
-│ ├── invoice_jan.pdf
-│ ├── salary_slip.pdf
+│   ├── invoice_jan.pdf
+│   ├── salary_slip.pdf
 │
 ├── Academics/
-│ ├── exam_notes.docx
+│   ├── exam_notes.docx
 │
 ├── Work/
-│ ├── meeting_report.pptx
+│   ├── meeting_report.pptx
 │
 ├── Personal/
-│ ├── shopping_list.txt
+│   ├── shopping_list.txt
 
 
 ---
